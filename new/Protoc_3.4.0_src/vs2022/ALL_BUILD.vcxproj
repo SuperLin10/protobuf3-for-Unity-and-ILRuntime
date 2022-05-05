@@ -18,6 +18,26 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="js_embed.vcxproj">
+      <Project>{fbd5a587-f214-3f6a-9a17-6749c537b8e1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libprotobuf-lite.vcxproj">
+      <Project>{e7713368-2461-3dfe-9d44-1873c8256058}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libprotobuf.vcxproj">
+      <Project>{81dd9512-1877-3e5d-898b-2db6b2081e7b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libprotoc.vcxproj">
+      <Project>{e3c26dae-3b1e-3917-af89-281f301255a1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="protoc.vcxproj">
+      <Project>{33c166aa-ab89-3121-8e1f-238edb62ce38}</Project>
+    </ProjectReference>
+    <ProjectReference Include="ZERO_CHECK.vcxproj">
+      <Project>{9f8c95c1-96c5-3f3e-811e-325cef8a98d4}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{68DFACD5-FB4D-348C-8E2F-31D98730DE87}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -63,7 +83,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>..\vs2013;..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\vs2022;..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -73,7 +93,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>..\vs2013;..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\vs2022;..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -83,7 +103,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>..\vs2013;..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\vs2022;..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -93,7 +113,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>..\vs2013;..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\vs2022;..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -101,34 +121,6 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\vs2013\ZERO_CHECK.vcxproj">
-      <Project>{9F8C95C1-96C5-3F3E-811E-325CEF8A98D4}</Project>
-      <Name>ZERO_CHECK</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\vs2013\js_embed.vcxproj">
-      <Project>{FBD5A587-F214-3F6A-9A17-6749C537B8E1}</Project>
-      <Name>js_embed</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\vs2013\libprotobuf.vcxproj">
-      <Project>{81DD9512-1877-3E5D-898B-2DB6B2081E7B}</Project>
-      <Name>libprotobuf</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\vs2013\libprotobuf-lite.vcxproj">
-      <Project>{E7713368-2461-3DFE-9D44-1873C8256058}</Project>
-      <Name>libprotobuf-lite</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\vs2013\libprotoc.vcxproj">
-      <Project>{E3C26DAE-3B1E-3917-AF89-281F301255A1}</Project>
-      <Name>libprotoc</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\vs2013\protoc.vcxproj">
-      <Project>{33C166AA-AB89-3121-8E1F-238EDB62CE38}</Project>
-      <Name>protoc</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
